@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
 				<meta property="twitter:description" content={meta.description} />
 				<meta property="twitter:image" content={meta.image} />
 			</Head>
-			<div className="text-white-bold min-h-screen">
+			<div className="text-white min-h-screen">
 				<div className="fixed inset-0 -z-10 h-screen">
 					<Image src={bgImage} placeholder="blur" layout="fill" alt="" />
 				</div>
