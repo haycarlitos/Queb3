@@ -33,6 +33,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 <p align="center">
     <br>
+    <img src="img/polygon_qr.png" width="500"/>
+    <br>
+<p>
+
+<p align="center">
+    <br>
     <img src="img/polygon_auth.png" width="500"/>
     <br>
 <p>
