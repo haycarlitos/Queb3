@@ -1,6 +1,6 @@
-# Refract
+# Queb3
 
-> A Hacker News style forum, built on the Lens Protocol
+> A decentrilized Quora usingn the Lens Protocol
 
 This starter kit is composed of Next.js and Tailwind CSS, with RainbowKit, ethers, & wagmi for all your web3 needs. It uses Typescript and an opinionated directory structure for maximum dev confy-ness.
 
