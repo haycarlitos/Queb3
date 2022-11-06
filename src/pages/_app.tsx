@@ -10,7 +10,6 @@ import ProfileContext from '@/context/ProfileContext'
 import { chain, createClient, WagmiConfig } from 'wagmi'
 import { ConnectKitProvider, getDefaultClient } from 'connectkit'
 
-console.log(process.env.NEXT_PUBLIC_INFURA_ID)
 
 const wagmiClient = createClient(
 	getDefaultClient({

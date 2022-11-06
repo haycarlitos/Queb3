@@ -15,6 +15,8 @@ import { ERROR_MESSAGE, LENSHUB_PROXY, RELAYER_ON } from '@/lib/consts'
 import CREATE_ASK_SIG from '@/graphql/publications/create-ask-typed-data'
 import { CreateAskBroadcastItemResult, RelayResult } from '@/generated/types'
 import { useAccount, useContractWrite, useNetwork, useSignTypedData } from 'wagmi'
+import dynamic from "next/dynamic";
+import { WidgetProps } from "@worldcoin/id";
 
 const Ask = () => {
 	const { profile } = useProfile()
@@ -31,6 +33,23 @@ const Ask = () => {
 			toast.error(error.message ?? ERROR_MESSAGE)
 		},
 	})
+
+	const WorldIDWidget = dynamic<WidgetProps>(() => import("@worldcoin/id").then((mod) => mod.WorldIDWidget), { ssr: false });
+
+	const widgetProps: WidgetProps = {
+		actionId: "wid_staging_76a49d7c856610f34a0d060e7b497bfe",
+		signal: "user-id-1",
+		enableTelemetry: true,
+		appName: "ConfCon",
+		signalDescription: "Ask if you are human",
+		theme: "dark",
+		debug: true, // Recommended **only** for development
+		onSuccess: (result) => console.log(result),
+		onError: ({ code, detail }) => console.log({ code, detail }),
+		onInitSuccess: () => console.log("Init successful"),
+		onInitError: (error) => console.log("Error while initialization World ID", error),
+	  };
+	  
 
 	const { writeAsync: sendTx, isLoading: txLoading } = useContractWrite({
 		mode: 'recklesslyUnprepared',
@@ -183,6 +202,8 @@ const Ask = () => {
 					value={question}
 					onChange={setQuestion}
 				/>
+				<WorldIDWidget {...widgetProps} />
+
 				<button
 					disabled={isLoading}
 					type="submit"
