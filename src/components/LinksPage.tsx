@@ -10,7 +10,7 @@ import EXPLORE_PUBLICATIONS from '@/graphql/explore/explorePublications'
 
 type SortCriteria = 'LATEST'
 
-const LinksPage: FC<{ sortCriteria?: SortCriteria }> = ({ sortCriteria = 'TOP_MIRRORED' }) => {
+const LinksPage: FC<{ sortCriteria?: SortCriteria }> = ({ sortCriteria =  'LATEST' }) => {
 	const { profile } = useProfile()
 	const [extraUpvotes, setExtraUpvotes] = useState<Record<string, number>>({})
 
