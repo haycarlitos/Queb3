@@ -40,7 +40,7 @@ const Ask = () => {
 		actionId: "wid_staging_76a49d7c856610f34a0d060e7b497bfe",
 		signal: "user-id-1",
 		enableTelemetry: true,
-		appName: "ConfCon",
+		appName: "Queb3",
 		signalDescription: "Ask if you are human",
 		theme: "dark",
 		debug: true, // Recommended **only** for development
