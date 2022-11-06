@@ -33,7 +33,7 @@ const Ask = () => {
 			toast.error(error.message ?? ERROR_MESSAGE)
 		},
 	})
-
+/*
 	const WorldIDWidget = dynamic<WidgetProps>(() => import("@worldcoin/id").then((mod) => mod.WorldIDWidget), { ssr: false });
 
 	const widgetProps: WidgetProps = {
@@ -50,7 +50,7 @@ const Ask = () => {
 		onInitError: (error) => console.log("Error while initialization World ID", error),
 	  };
 	  
-
+*/
 	const { writeAsync: sendTx, isLoading: txLoading } = useContractWrite({
 		mode: 'recklesslyUnprepared',
 		addressOrName: LENSHUB_PROXY,
@@ -99,7 +99,7 @@ const Ask = () => {
 						},
 					],
 					media: [],
-					appId: 'refract',
+					appId: 'queb3',
 				})
 
 				const {
@@ -190,8 +190,7 @@ const Ask = () => {
 				<p className="text-white/40">Share your Qs with ppl who get you</p>
 			</div>
 			<div className="flex md:hidden items-center space-x-4">
-				<HeaderLink href="/">Trending</HeaderLink>
-				<HeaderLink href="/newest">Newest</HeaderLink>
+				<HeaderLink href="/">Questions</HeaderLink>
 				<HeaderLink href="/Ask">Ask</HeaderLink>
 			</div>
 			<form onSubmit={createAsk} className="pt-12 space-y-6">
@@ -202,8 +201,6 @@ const Ask = () => {
 					value={question}
 					onChange={setQuestion}
 				/>
-				<WorldIDWidget {...widgetProps} />
-
 				<button
 					disabled={isLoading}
 					type="submit"

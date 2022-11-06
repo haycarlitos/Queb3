@@ -8,9 +8,9 @@ import { FC, useMemo, useState } from 'react'
 import { useProfile } from '@/context/ProfileContext'
 import EXPLORE_PUBLICATIONS from '@/graphql/explore/explorePublications'
 
-type SortCriteria = 'TOP_MIRRORED' | 'TOP_COMMENTED' | 'LATEST'
+type SortCriteria = 'LATEST'
 
-const LinksPage: FC<{ sortCriteria?: SortCriteria }> = ({ sortCriteria = 'TOP_MIRRORED' }) => {
+const LinksPage: FC<{ sortCriteria?: SortCriteria }> = ({ sortCriteria =  'LATEST' }) => {
 	const { profile } = useProfile()
 	const [extraUpvotes, setExtraUpvotes] = useState<Record<string, number>>({})
 
@@ -42,10 +42,9 @@ const LinksPage: FC<{ sortCriteria?: SortCriteria }> = ({ sortCriteria = 'TOP_MI
 
 	return (
 		<>
-			<h2 className="my-4 text-2xl font-medium">{sortCriteria == 'LATEST' ? 'Newest' : 'Trending'}</h2>
+			<h2 className="my-4 text-2xl font-medium">{sortCriteria == 'LATEST' ? 'Questions' : 'Trending'}</h2>
 			<div className="flex md:hidden items-center space-x-4">
-				<HeaderLink href="/">Trending</HeaderLink>
-				<HeaderLink href="/newest">Newest</HeaderLink>
+\				<HeaderLink href="/questions">Questions</HeaderLink>
 				<HeaderLink href="/create">Ask</HeaderLink>
 			</div>
 			{!loading && !error && links?.length == 0 && (

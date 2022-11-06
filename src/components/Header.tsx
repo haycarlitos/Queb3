@@ -11,9 +11,8 @@ const Header = () => {
 				</a>
 			</Link>
 			<div className="hidden md:flex items-center space-x-4">
-				<HeaderLink href="/">Trending</HeaderLink>
-				<HeaderLink href="/newest">Newest</HeaderLink>
-				<HeaderLink href="/create">Create</HeaderLink>
+				<HeaderLink href="/questions">Questions</HeaderLink>
+				<HeaderLink href="/create">Ask</HeaderLink>
 			</div>
 			<ConnectWallet />
 		</header>
