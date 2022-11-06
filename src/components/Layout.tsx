@@ -23,13 +23,11 @@ const Layout = ({ children }) => {
 				<meta property="og:url" content="https://twitter.com" />
 				<meta property="og:title" content={meta.title} />
 				<meta property="og:description" content={meta.description} />
-				<meta property="og:image" content={meta.image} />
 
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content="https://twitter.com" />
 				<meta property="twitter:title" content={meta.title} />
 				<meta property="twitter:description" content={meta.description} />
-				<meta property="twitter:image" content={meta.image} />
 			</Head>
 			<div className="text-white min-h-screen">
 				<div className="fixed inset-0 -z-10 h-screen">
