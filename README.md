@@ -1,5 +1,12 @@
 # Queb3
 
+<p align="center">
+    <br>
+    <img src="imgs/logo.png" width="500"/>
+    <br>
+<p>
+
+
 > A decentrilized Quora usingn the Lens Protocol
 
 This starter kit is composed of Next.js and Tailwind CSS, with RainbowKit, ethers, & wagmi for all your web3 needs. It uses Typescript and an opinionated directory structure for maximum dev confy-ness.
