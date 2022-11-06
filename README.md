@@ -15,6 +15,8 @@
 |---|---|
 | Landing Page | https://queb3.vercel.app/ |
 | Landing Page | https://www.figma.com/proto/gipiEHPom58Bpw6pHrm1aM/ETH?embed_host=share&kind=&node-id=1%3A24&page-id=0%3A1&scaling=min-zoom&starting-point-node-id=1%3A24&viewport=2759%2C1739%2C0.41 |
+| Polygon ID SC |0x90e8c54369310031F4B40A75B124A924E1AEA9b1 |
+| Polygon Validate Wallet |Into the readme* |
 | Add NumLikes to Polygon Wallet | https://platform-test.polygonid.com/claim-link/8c061bb9-c3a5-4811-82bf-3566d0e3440e |
 | Push Protocol SC | 0xFF9d3FD89cf965748222de08A9d6b24DCa878c09 |
 | Push Protocol Page | https://staging.push.org/#/channels |
